@@ -64,7 +64,13 @@ const Drawing = ({ canvasRef }) => {
         };
     }, [canvasRef]);
 
-
+    return (
+        <div className = "canvasContainer">
+            <canvas ref = {canvasRef} id = "canvas" width={600} height = {400}></canvas>
+        </div>
+    );
+    
+    /*
     return (
         <canvas
             ref={canvasRef}
@@ -73,7 +79,9 @@ const Drawing = ({ canvasRef }) => {
             height={400}
             style={{ border: '1px solid black', display: 'block', margin: 'auto' }}
         ></canvas>
-    );
+    */
+
+    
 };
 
 

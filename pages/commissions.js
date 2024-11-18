@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 
@@ -38,7 +38,25 @@ export default function Commissions() {
         }
     };
 
+    return (
+        <div className="container">
+            <Navbar />
+            <h2>Commissions</h2>
+            <form onSubmit={handleFormSubmit}>
+                <fieldset>
+                    <legend>Submit Your Drawing Request</legend>
+                    <label htmlFor="username">Your Name:</label>
+                    <input type="text" id="username" name="username" required />
+                    <label htmlFor="description">Drawing Description:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                    <input type="submit" value="Submit" />
+                </fieldset>
+            </form>
+            {submissionStatus && <p>{submissionStatus}</p>}
+        </div>
+    );
 
+    /*
     return (
         <div>
             <Navbar />
@@ -57,8 +75,11 @@ export default function Commissions() {
             </form>
 
 
-            {/* Submission Status */}
-            {submissionStatus && <p style={{ marginTop: '20px' }}>{submissionStatus}</p>}
-        </div>
-    );
+            */
+           
+            //{/* Submission Status */}
+            //{submissionStatus && <p style={{ marginTop: '20px' }}>{submissionStatus}</p>}
+        //</div>
+    //);
+    
 }
