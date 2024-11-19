@@ -134,7 +134,7 @@ form textarea {
 
 }
 
-form imput[type = "submit"] {
+form input[type = "submit"] {
   background-color: #0070f3;
   color: white;
   border: none;

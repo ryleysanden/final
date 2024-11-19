@@ -34,23 +34,10 @@ export default function PastWorks() {
             <h2>Past Works</h2>
             <p>Draw something and save your work!</p>
             <Drawing canvasRef={canvasRef} />
-            <button onClick={handleSaveDrawing} style={styles.button}>
-                Save Drawing
-            </button>
+            
         </div>
     );
-}
-
-
-const styles = {
-    button: {
-        marginTop: '10px',
-        padding: '10px 20px',
-        backgroundColor: '#007BFF',
-        color: '#fff',
-        border: 'none',
-        borderRadius: '5px',
-        cursor: 'pointer',
-        fontSize: '16px',
-    },
 };
+
+
+
