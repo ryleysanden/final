@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 
+
 export default function Commissions() {
     const [submissionStatus, setSubmissionStatus] = useState(''); // Track submission status
 
@@ -14,6 +15,9 @@ export default function Commissions() {
         const formData = {
             username: e.target.username.value, // Matches {{username}} in the EmailJS template
             description: e.target.description.value, // Matches {{description}} in the EmailJS template
+            medium: e.target.medium.value,
+            deadline: e.target.deadline.value,
+            size: e.target.size.value,
         };
 
 
@@ -44,42 +48,40 @@ export default function Commissions() {
             <h2>Commissions</h2>
             <form onSubmit={handleFormSubmit}>
                 <fieldset>
-                    <legend>Submit Your Drawing Request</legend>
+
+                    <legend>Commission Request Form</legend>
+
                     <label htmlFor="username">Your Name:</label>
                     <input type="text" id="username" name="username" required />
-                    <label htmlFor="description">Drawing Description:</label>
+                    <label htmlFor="description">Piece Decription: Please give a detailed description of what you would like the piece to look like.</label>
+
                     <textarea id="description" name="description" rows="4" required></textarea>
+
+                    <label htmlFor = "medium">Please select what you would like your piece made of.</label>
+                    <select id="medium" name="medium" required>
+                        <option value="" disabled selected>
+                            Select a medium
+                        </option>
+                        <option value="Pencil">Pencil</option>
+                        <option value="Watercolor">Watercolor</option>
+                        <option value="Oil Paint">Oil Paint</option>
+                        <option value="Acrylic">Acrylic</option>
+                        <option value="Digital">Digital</option>
+                    </select>
+                    
+                    <label htmlFor="deadline">Deadline: When do you need the piece by?</label>
+                    <input type="date" id="deadline" name="deadline" required />
+
+                    <label htmlFor="size">Size: Specify the size of the piece (e.g., 8"x10", A4).</label>
+                    <input type="text" id="size" name="size" required />
+
+
+
                     <input type="submit" value="Submit" />
                 </fieldset>
             </form>
             {submissionStatus && <p>{submissionStatus}</p>}
         </div>
     );
-
-    /*
-    return (
-        <div>
-            <Navbar />
-            <h2>Commissions</h2>
-            <form onSubmit={handleFormSubmit} style={{ marginTop: '20px' }}>
-                <fieldset>
-                    <legend>Submit Your Drawing Request</legend>
-                    <label htmlFor="username">Your Name:</label>
-                    <input type="text" id="username" name="username" required />
-                    <br />
-                    <label htmlFor="description">Drawing Description:</label>
-                    <textarea id="description" name="description" rows="4" required></textarea>
-                    <br />
-                    <input type="submit" value="Submit" />
-                </fieldset>
-            </form>
-
-
-            */
-           
-            //{/* Submission Status */}
-            //{submissionStatus && <p style={{ marginTop: '20px' }}>{submissionStatus}</p>}
-        //</div>
-    //);
-    
+  
 }

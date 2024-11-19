@@ -2,6 +2,8 @@ import Navbar from '../components/Navbar';
 import { useState } from 'react';
 
 
+
+
 export default function About() {
     const [currentPage, setCurrentPage] = useState('About');
 

@@ -39,42 +39,38 @@ img {
   padding: 20px;
 
 }
-
-/*Navbar */
+/* Navbar Styles */
 nav {
   background-color: #333;
   padding: 1rem;
-
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  justify-content: center;
-
+  gap: 1rem;
+  padding: 0;
 }
 
 nav ul li {
   margin: 0 15px;
-
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-
+  color: black; /* Default color */
+  font-weight: normal;
 }
 
-nav ul li a.hover, 
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
 nav ul li a.active {
-  color: #0070f3;
-  text-decoration: underline;
-
+  color: blue; /* Active page color */
+  font-weight: bold; /* Optional: emphasize active page */
 }
+
 
 /* Canvas */
 .canvasContainer {
@@ -107,7 +103,7 @@ form {
 
 }
 
-form fieldset{
+fieldset {
   border: none;
   margin: 0;
   padding: 0;
@@ -171,6 +167,6 @@ p {
   color: #555;
   text-align: center;
   margin: 0 20px;
-  
+
 
 }
