@@ -1,12 +1,13 @@
 import Navbar from '../components/Navbar';
+import AvailablePieces from '../components/AvailablePieces';
 
-
-export default function Pieces() {
+export default function AvailablePiecesPage() {
     return (
         <div>
             <Navbar />
-            <h2>Available Pieces</h2>
-            <p>Browse the collection of available art pieces.</p>
+            <AvailablePieces />
         </div>
     );
 }
+
+

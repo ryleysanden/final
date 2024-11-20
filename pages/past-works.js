@@ -1,22 +1,21 @@
 import Navbar from '../components/Navbar';
 import Drawing from '../components/Drawing';
-import { useRef } from 'react';
+import PastWorks from '../components/PastWorks'; 
+import { useRef } from 'react';  
 
 
-export default function PastWorks() {
+export default function PastWorksPage() {
     const canvasRef = useRef(null);
-
 
     const handleSaveDrawing = () => {
         const canvas = canvasRef.current;
         if (canvas) {
-            const image = canvas.toDataURL('image/png'); // Save the drawing as a Base64 image
-            const newTab = window.open();
+            const image = canvas.toDataURL('image/png'); 
             if (newTab) {
-                newTab.document.body.style.margin = '0'; // Remove margin for the image
+                newTab.document.body.style.margin = '0'; 
                 const imgElement = newTab.document.createElement('img');
                 imgElement.src = image;
-                imgElement.style.width = '100%'; // Optional: Scale to fit the tab
+                imgElement.style.width = '100%'; 
                 imgElement.style.height = 'auto';
                 newTab.document.body.appendChild(imgElement);
             } else {
@@ -27,17 +26,16 @@ export default function PastWorks() {
         }
     };
 
-
     return (
         <div>
             <Navbar />
-            <h2>Past Works</h2>
-            <p>Draw something and save your work!</p>
-            <Drawing canvasRef={canvasRef} />
             
+            {/* First, display the Past Works gallery */}
+            <PastWorks /> 
+            <p>Feeling inspired by Ashton's work? Go ahead a create your own master piece!</p>
+            <p>Draw something and save your work!</p>
+            {/* Then, display the drawing canvas */}
+            <Drawing canvasRef={canvasRef} />
         </div>
     );
-};
-
-
-
+}

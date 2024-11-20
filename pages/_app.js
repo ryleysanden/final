@@ -1,5 +1,14 @@
-import styles from '../styles/global.css';
+import '../styles/global.css';
 
-export default function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
-  }
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <nav>
+       
+      </nav>
+      <div className="content-wrapper">
+        <Component {...pageProps} />
+      </div>
+    </>
+  );
+}

@@ -17,10 +17,11 @@
 }
 
 .saveButton {
-    border: 1px solid black;
-    color: blue;
-    background-color: green;
     
+    border: 1px solid black;
+    color: white;
+    background-color: #2B4162;
+
 
 
 }
