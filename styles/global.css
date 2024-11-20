@@ -41,7 +41,7 @@ img {
 }
 /* Navbar Styles */
 nav {
-  background-color: #333;
+  background-color: #2b4162;
   padding: 1rem;
 }
 
@@ -63,7 +63,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00bcd4;
+  color: #def2c8;
 }
 
 nav ul li a.active {

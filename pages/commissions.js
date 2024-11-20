@@ -23,6 +23,7 @@ export default function Commissions() {
         const formData = new FormData(); // Use FormData for file uploads
         formData.append('username', e.target.username.value);
         formData.append('email', e.target.email.value);
+        formData.append('phonenumber', e.target.phonenumber.value);
         formData.append('description', e.target.description.value);
         formData.append('medium', e.target.medium.value);
         formData.append('deadline', e.target.deadline.value);
@@ -41,6 +42,7 @@ export default function Commissions() {
                 {
                     username: e.target.username.value,
                     email: e.target.email.value,
+                    phonenumber: e.target.phonenumber.value,
                     description: e.target.description.value,
                     medium: e.target.medium.value,
                     deadline: e.target.deadline.value,
@@ -73,7 +75,14 @@ export default function Commissions() {
                     <br />
 
                     <label htmlFor="email">Your Email:</label>
-                    <input type="text" id="email" name="email" required />
+                    <input type="email" id="email" name="email" required />
+                    <br/>
+
+                
+
+                    <label htmlFor="phonenumber">Your Phone Number:</label>
+                    <input type="text" id="phonenumber" name="phonenumber" required />
+                    <br/>
 
                     <label htmlFor="description">
                         Piece Description: Please give a detailed description of what you would like the piece to look like.
